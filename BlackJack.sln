@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack-UI", "BlackJack-UI\BlackJack-UI.csproj", "{D2FDAC96-06C5-4637-B29C-B33B6AE6E0A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaJuego", "LogicaJuego\LogicaJuego.csproj", "{CA7D6AC6-FEF7-4761-8FCE-45E8B42EDB0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2FDAC96-06C5-4637-B29C-B33B6AE6E0A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2FDAC96-06C5-4637-B29C-B33B6AE6E0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2FDAC96-06C5-4637-B29C-B33B6AE6E0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2FDAC96-06C5-4637-B29C-B33B6AE6E0A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7D6AC6-FEF7-4761-8FCE-45E8B42EDB0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7D6AC6-FEF7-4761-8FCE-45E8B42EDB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7D6AC6-FEF7-4761-8FCE-45E8B42EDB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7D6AC6-FEF7-4761-8FCE-45E8B42EDB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC167F71-33D2-4AD3-BDCF-C1107AC0E6A7}
+	EndGlobalSection
+EndGlobal

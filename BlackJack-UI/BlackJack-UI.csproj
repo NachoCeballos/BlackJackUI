@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2FDAC96-06C5-4637-B29C-B33B6AE6E0A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BlackJack_UI</RootNamespace>
+    <AssemblyName>BlackJack-UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.5\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.5\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JuegoWPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JuegoWPF.Designer.cs">
+      <DependentUpon>JuegoWPF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfiguracionWPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfiguracionWPF.Designer.cs">
+      <DependentUpon>ConfiguracionWPF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="JuegoWPF.resx">
+      <DependentUpon>JuegoWPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfiguracionWPF.resx">
+      <DependentUpon>ConfiguracionWPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basto-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espada12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oro-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tréboles-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picas-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazones-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicaJuego\LogicaJuego.csproj">
+      <Project>{CA7D6AC6-FEF7-4761-8FCE-45E8B42EDB0A}</Project>
+      <Name>LogicaJuego</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamantes-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carta-0.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
